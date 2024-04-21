@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <nav>
+
+    
+  </nav>
+
+    <div class="box">
+        <a href="Supported/About.html">About</a>
+        <a href="Supported/Contact.html">Contact Us</a>
+        <a href="Supported/imprint.html">Imprint</a>
+        <a href="Supported/privacy.html">Privacy</a>
+        <a href="Supported/Terms.html">Terms</a>
+      </div>
+
+      
+      <style>
+        .box {
+          text-align: center;
+        }
+        .box a {
+          display: block;
+          margin: 89px 0; /* Add vertical spacing between links */
+        }
+      </style><style>
+        .box {
+          text-align: center;
+        }
+        .box a {
+          justify-content: end;
+          display: inline-flex;
+          background-color: #5ba1d6;
+          color: #fff;
+          padding: 10px 43px;
+          text-decoration: none;
+          border-radius: 10px;
+          margin: 15px 16px;
+          transition: background-color 0.3s;
+        }
+        .box a:hover {
+          background-color: #9ec6ef;
+        }
+        .intro {
+            
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 15px 15px;
+            border-width: 7.5px;
+            border-color: rgb(163, 166, 235);
+            border-style: ridge;
+        }
+       
+      </style>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header>
+      <img align="left" width="=70" height="70" src="Supported/Final_image.jpeg" alt="Logo" class="logo">
+      
+    </header>
+    <title align = "center"> Image Resizer</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+  
+  
+    <header>
+        <h1 align="center ">Image Resizer</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h2 align="center ">Image Resizer</h2>
+            <p align="center ">Easily resize images online for free.</p>
+            <p align="center ">Or, drag and drop an image here</p>
+
+  
+
+
+<div align="center" class="container">
+  <div align="center" class="form-container">
+    <form id="resizeForm" onsubmit="return false;">
+      <div>
+        <label for="file">Select Image</label>
+        <input type="file" id="file" name="file" accept="image/*">
+      </div>
+      <div>
+        <label for="width">Width:</label>
+        <input type="text" id="width" name="width">
+      </div>
+      <div>
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height">
+      </div>
+      <button type="button" onclick="resizeImage()">Resize Image</button>
+    </form>
+    <div id="result"></div>
+  </div>
+</div>
+<div class="container">
+  
+  <p><br>1. Click on the "Select Image" button to select an image.</p>
+  <p><br>2. Enter a new target size for your image.</p>
+  <p><br>3. Click the "Resize Image" button to resize the image.</p>
+
+<script>
+    function resizeImage() {
+      const fileInput = document.getElementById('file');
+      const widthInput = document.getElementById('width');
+      const heightInput = document.getElementById('height');
+      const resultDiv = document.getElementById('result');
+  
+      const file = fileInput.files[0];
+      const width = parseInt(widthInput.value);
+      const height = parseInt(heightInput.value);
+  
+      if (!file || !width || !height) {
+        alert("Please select an image and enter width and height.");
+        return;
+      }
+  
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+  
+          canvas.width = width;
+          canvas.height = height;
+  
+          ctx.drawImage(img, 0, 0, width, height);
+  
+          const resizedImage = canvas.toDataURL('image/jpeg');
+  
+          const resizedImgElement = document.createElement('img');
+          resizedImgElement.src = resizedImage;
+          resizedImgElement.width = width;
+          resizedImgElement.height = height;
+  
+          resultDiv.innerHTML = '';
+          resultDiv.appendChild(resizedImgElement);
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+  
+  
+  
+
+</body>
+</html>
+
+            </ol>
+        </section>
+        <section class="tools">
+            <h2 align="center ">Image Tools</h2>
+            <ul>
+              </ul>
+</div>
+<div class="container">
+  <ul align="center">
+
+              <br><a href="https://www.reduceimages.com/">Image Resizer</a></br>
+         <br> <a href="https://www.reduceimages.com/">  Bulk Image Resizer</a></br>
+                <br><a href="https://www.reduceimages.com/">Image Compressor</a></br>
+                <br> <a href="https://www.reduceimages.com/">Crop Image</a></br>
+                <br> <a href="https://www.reduceimages.com/">Collage Maker</a></br>
+                <br> <a href="https://www.reduceimages.com/">Flip Image</a></br>
+                 <br><a href="https://www.reduceimages.com/">Rotate Image</a></br>
+                <br> <a href="https://www.reduceimages.com/">Image Enlarger</a></br>
+                <br> <a href="https://www.reduceimages.com/">Color Picker</a></br>
+                 </ul>
+</div>
+
+            </ul>
+        </section>
+        <section class="pdf-tools">
+            <h2 align="center "class="centered-heading">PDF      Tools</h2> 
+        <div class="container">
+  <ul align="center">
+              <a href="https://www.ilovepdf.com/merge_pdf">PDF Merge</a></br>
+             <br> <a href="https://www.ilovepdf.com/compress_pdf">Compress PDF</a></br>
+              <br> <a href="https://www.ilovepdf.com/rotate_pdf">Resize PDF</a></br>
+              <br> <a href="https://www.ilovepdf.com/rotate_pdf">Rotate PDF</a></br>
+              <br> <a href="https://www.ilovepdf.com/split_pdf">Split PDF</a></br>
+              <br><a href="https://www.ilovepdf.com/pdf_to_jpg">JPG to PDF</a></br> </ul>
+</div>
+
+            </ul>
+        </section>
+       
+        <footer align="center">
+            <div align="center "class="language-select">
+                <select>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="si">සිංහල</option>
+                </select>
+            </div>
+     <ul class="container">
+  <a href="#">About</a>
+  <a href="#">Contact Us</a>
+  <a href="#">Imprint</a>
+  <a href="#">Privacy</a>
+  <a href="#">Terms</a>
+</ul>
+</div>
+
+
+            <div class="footer-info">
+                <p align="center ">&copy; 2024 ImageResizer v.3.5.14. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
+
